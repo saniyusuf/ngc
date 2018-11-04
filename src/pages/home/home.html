@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card
+    [navPush]="'detail'"
+    *ngFor="let film of films | async">
+    <img [src]="film.Poster"/>
+    <ion-card-content>
+      <ion-card-title>
+       {{film.Title}}
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
